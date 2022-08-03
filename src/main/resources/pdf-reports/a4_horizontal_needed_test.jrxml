@@ -4,106 +4,106 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
               name="Certificate_template_1" pageWidth="1123" pageHeight="794" columnWidth="1103"
-              leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" whenResourceMissingType="Empty" uuid="89117ad6-3c84-4403-a7cf-a658d34ec888">
+              leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="89117ad6-3c84-4403-a7cf-a658d34ec888">
 
     <style name="Default" isDefault="true" pdfFontName="/pdf-reports/font/Halvar Breitschrift Medium.ttf" fontSize="14" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
 
-    <field name="user_name"/>
-    <field name="issuance_date" />
+    <field name="userName"/>
+    <field name="issuanceDate" />
 
     <background>
         <band splitType="Stretch"/>
     </background>
     <title>
-        <band height="1" splitType="Stretch"/>
+        <band splitType="Stretch"/>
     </title>
     <pageHeader>
-        <band height="1" splitType="Stretch"/>
+        <band splitType="Stretch"/>
     </pageHeader>
     <columnHeader>
-        <band height="1" splitType="Stretch"/>
+        <band splitType="Stretch"/>
     </columnHeader>
     <detail>
-        <band height="767" splitType="Stretch">
+        <band height="794" splitType="Stretch">
             <image>
-                <reportElement x="0" y="0" width="289" height="765" uuid="31e6f512-28d1-47a5-9dad-21a3fa70adaf"/>
+                <reportElement x="0" y="0" width="300" height="794" uuid="31e6f512-28d1-47a5-9dad-21a3fa70adaf"/>
                 <imageExpression><![CDATA[org.example.Decorator.getRealFilePathFrontend("/challenge_logo.jpg")]]></imageExpression>
             </image>
             <staticText>
-                <reportElement x="480" y="150" width="310" height="60" forecolor="#2572da" uuid="b5113369-3677-4e88-b9d9-e27152fda9ee"/>
+                <reportElement x="470" y="150" width="310" height="60" forecolor="#2572da" uuid="b5113369-3677-4e88-b9d9-e27152fda9ee"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
-                    <font size="45" isBold="true"/>
+                    <font size="45" isBold="false"/>
                 </textElement>
                 <text>Сертифікат</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="240" width="171" height="25" forecolor="#020203" uuid="40bfc687-bc05-457c-9c6d-45d7b78a082f"/>
+                <reportElement x="330" y="240" width="171" height="25" forecolor="#020203" uuid="40bfc687-bc05-457c-9c6d-45d7b78a082f"/>
                 <textElement>
                     <font size="16" isBold="true"/>
                 </textElement>
                 <text>№0000000000</text><!-- to change-->
             </staticText>
             <staticText>
-                <reportElement x="340" y="270" width="171" height="25" forecolor="#020203" uuid="40bfc687-bc05-457c-9c6d-45d7b78a082f"/>
+                <reportElement x="330" y="270" width="171" height="25" forecolor="#020203" uuid="40bfc687-bc05-457c-9c6d-45d7b78a082f"/>
                 <textElement>
                     <font size="16" isBold="true"/>
                 </textElement>
                 <text>підтверджує, що</text>
             </staticText>
             <line>
-                <reportElement x="340" y="330" width="740" height="2" forecolor="#E6E227" uuid="7a11bd36-f0ef-433d-b1be-3064b9bb690b"/>
+                <reportElement x="330" y="330" width="740" height="2" forecolor="#E6E227" uuid="7a11bd36-f0ef-433d-b1be-3064b9bb690b"/>
             </line>
             <staticText>
-                <reportElement x="340" y="350" width="390" height="60" uuid="94d5fdfa-9439-4090-b1c5-312832d23b36"/>
+                <reportElement x="330" y="350" width="390" height="60" uuid="94d5fdfa-9439-4090-b1c5-312832d23b36"/>
                 <textElement>
                     <font size="16" isBold="true"/>
                 </textElement>
                 <text>брав (-ла) участь у проекті "Єдині"</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="369" width="430" height="60" uuid="94d5fdfa-9439-4090-b1c5-312832d23b36"/>
+                <reportElement x="330" y="369" width="430" height="60" uuid="94d5fdfa-9439-4090-b1c5-312832d23b36"/>
                 <textElement>
                     <font size="16" isBold="true"/>
                 </textElement>
                 <text>та успішно закінчив (-ла) курс підтримки у переході на українську мову.</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="450" width="340" height="25" uuid="cc8ec782-950d-4f13-ba7c-cadf15587a3e"/>
+                <reportElement x="330" y="450" width="340" height="25" uuid="cc8ec782-950d-4f13-ba7c-cadf15587a3e"/>
                 <textElement>
                     <font size="16" isBold="true"/>
                 </textElement>
                 <text>Тривалість навчання - 40 годин.</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="510" width="471" height="50" uuid="8d5ebb5d-34ad-40d2-a66f-8046c287bdcf"/>
+                <reportElement x="330" y="510" width="471" height="50" uuid="8d5ebb5d-34ad-40d2-a66f-8046c287bdcf"/>
                 <textElement>
                     <font size="12" isBold="true"/>
                 </textElement>
                 <text>Проєкт реалізований у період з 4 по 31 липня 2022 року Ініціативою "Навчай українською",</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="538" width="471" height="50" uuid="8d5ebb5d-34ad-40d2-a66f-8046c287bdcf"/>
+                <reportElement x="330" y="538" width="471" height="50" uuid="8d5ebb5d-34ad-40d2-a66f-8046c287bdcf"/>
                 <textElement>
                     <font size="12" isBold="true"/>
                 </textElement>
                 <text>до якої належить "Українська гуманітарна платформа".</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="620" width="240" height="30" uuid="cb540382-6575-4a56-928c-d44f2058a024"/>
+                <reportElement x="330" y="620" width="240" height="30" uuid="cb540382-6575-4a56-928c-d44f2058a024"/>
                 <textElement>
                     <font size="18" isBold="true"/>
                 </textElement>
                 <text>Наталка Федечко</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="640" width="240" height="40" uuid="4ca20b19-60d9-4563-8866-5e12cbdd9c0b"/>
+                <reportElement x="330" y="640" width="240" height="40" uuid="4ca20b19-60d9-4563-8866-5e12cbdd9c0b"/>
                 <textElement>
                     <font size="11"/>
                 </textElement>
                 <text>голова</text>
             </staticText>
             <staticText>
-                <reportElement x="340" y="653" width="280" height="40" uuid="4ca20b19-60d9-4563-8866-5e12cbdd9c0b"/>
+                <reportElement x="330" y="653" width="280" height="40" uuid="4ca20b19-60d9-4563-8866-5e12cbdd9c0b"/>
                 <textElement>
                     <font size="11"/>
                 </textElement>
@@ -118,7 +118,7 @@
             </staticText>
             <image>
                 <reportElement x="870" y="90" width="200" height="200" uuid="f3471345-6bca-4706-a2a4-efd645e19729"/>
-                <imageExpression><![CDATA[org.example.Decorator.getRealFilePathFrontend("/demo.png")]]></imageExpression>
+                <imageExpression><![CDATA[org.example.QRCodeService.getQrCodeAsStream("https://speak-ukrainian.org.ua")]]></imageExpression>
             </image>
             <image>
                 <reportElement x="620" y="690" width="159" height="70" uuid="f3471345-6bca-4706-a2a4-efd645e19729"/>
@@ -129,12 +129,12 @@
                 <imageExpression><![CDATA[org.example.Decorator.getRealFilePathFrontend("/pechatka.jpg")]]></imageExpression>
             </image>
             <textField>
-                <reportElement x="340" y="300" width="318" height="29" uuid="67df464f-36c7-4834-983f-dc6a00170e6e"/>
+                <reportElement x="330" y="300" width="318" height="29" uuid="67df464f-36c7-4834-983f-dc6a00170e6e"/>
 
                 <textElement>
                     <font size="18"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{user_name}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="959" y="50" width="150" height="19" uuid="81313113-97ec-4c10-84d9-185edd021fca"/>
@@ -142,7 +142,7 @@
                 <textElement>
                     <font isBold="true"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{issuance_date}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{issuanceDate}]]></textFieldExpression>
             </textField>
             <staticText>
                 <reportElement x="880" y="49" width="78" height="19" uuid="afa193c3-e74f-4b54-90f3-c2ca75ec401d"/>
@@ -154,12 +154,14 @@
         </band>
     </detail>
     <columnFooter>
-        <band height="1" splitType="Stretch"/>
+        <band height="0" splitType="Stretch"/>
     </columnFooter>
     <pageFooter>
         <band splitType="Stretch"/>
     </pageFooter>
     <summary>
-        <band height="1" splitType="Stretch"/>
+        <band height="0" splitType="Stretch"/>
     </summary>
 </jasperReport>
+
+<!-- <![CDATA[org.example.Decorator.getRealFilePathFrontend("/demo.png")]]> -->

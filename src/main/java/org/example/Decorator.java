@@ -10,6 +10,14 @@ import java.nio.file.Paths;
 @Component
 public class Decorator {
 
+    public static String formCertificateDate(){
+        return null;
+    }
+
+    public static String formCourseLength(Integer length){
+        return String.format("Тривалість навчання - %d годин.", length);
+    }
+
     public static String getRealFilePath(String path) throws IOException{
         Path resourcePath = Paths.get((new ClassPathResource(path)).getURI());
         return resourcePath.toFile().getAbsolutePath();
