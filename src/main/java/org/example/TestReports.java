@@ -25,7 +25,9 @@ public class TestReports {
 }
 
 class BeanService{
-    private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_needed_test.jrxml";
+//    private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_needed_test.jrxml";
+    private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_needed_test_24_size.jrxml";
+//    private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_specific_test_24_size.jrxml";
 
     private Map<String, Object> getParameters(DataBean bean) throws IOException {
         Map<String, Object> parameters = new HashMap<>();
@@ -46,7 +48,7 @@ class BeanService{
     }
 
     public void saveToPdf(JasperPrint print) throws JRException {
-        String exportPath = "/Users/aroslavtihoveckij/IdeaProjects/pdf_generation/src/main/resources/pdf-reports/output/template.pdf";
+        String exportPath = "C:\\Users\\yarik\\Desktop\\pdf_generation\\src\\main\\resources\\pdf-reports\\output\\template.pdf";
         JasperExportManager.exportReportToPdfFile(print, exportPath);
     }
 
