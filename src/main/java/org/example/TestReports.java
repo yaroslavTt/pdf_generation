@@ -7,9 +7,7 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TestReports {
     public static void main(String[] args) throws Exception {
@@ -20,7 +18,15 @@ public class TestReports {
 
         BeanService service = new BeanService();
 
+        List<Long> numbers = List.of(2030000001L, 304000014L, 1040000011L);
+
         service.saveToPdf(service.createJasperPrint(bean));
+
+        System.out.println(String.format("%05d", 55));
+
+        System.out.println(service.getBiggestSerialNumber(List.of(1030000013L)));
+        System.out.println(service.generateSerialNumber(3, 01));
+
     }
 }
 
@@ -29,10 +35,43 @@ class BeanService{
     private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_needed_test_24_size.jrxml";
 //    private static final String TEMPLATE_PATH = "/pdf-reports/a4_horizontal_specific_test_24_size.jrxml";
 
+    private static List<Long> DATABASE = List.of(2030000001L, 3040000017L, 1040000011L);
+
+
+
     private Map<String, Object> getParameters(DataBean bean) throws IOException {
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("BEAN", bean);
         return parameters;
+    }
+
+    //номер курсу
+    public Long getBiggestSerialNumber(List<Long> numbers){
+        return numbers.stream()
+                .map(x -> Long.valueOf(
+                        x.toString()
+                        .substring(3)))
+                .max(Comparator.comparing(Long::valueOf))
+                .orElse(0L);
+    }
+
+    public Long generateSerialNumber(Integer type, Integer challengeNumber){
+        //Query to find list of numbers, then getBiggestSerialNumber
+        Long numberNotFormatted = 0L;
+
+        try{
+            numberNotFormatted = getBiggestSerialNumber(DATABASE) + 1;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        String typeNumberString = type.toString();
+
+        String certificateNumberString = String.format("%07d", numberNotFormatted);
+
+        String challengeNumberString = String.format("%02d", challengeNumber);
+
+        return Long.valueOf(typeNumberString + challengeNumberString + certificateNumberString);
     }
 
     public byte[] getPdfOutput(final DataBean bean){
