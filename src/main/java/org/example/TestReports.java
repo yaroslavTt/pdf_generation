@@ -37,6 +37,8 @@ class BeanService{
 
     private static List<Long> DATABASE = List.of(2030000001L, 3040000017L, 1040000011L);
 
+    private static Long lllll = 1L;
+
 
 
     private Map<String, Object> getParameters(DataBean bean) throws IOException {
